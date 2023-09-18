@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>업다운 게임</title>
+    <style>
+      body {
+        height: 100vh;
+        background: linear-gradient(120deg, #0272a4, #f6a564);
+      }
+      .contWrap {
+        position: relative;
+        width: 400px;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 50px 20px;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        border-radius: 20px;
+      }
+      input {
+        padding: 10px 20px;
+        font-size: 20px;
+        text-align: center;
+        max-width: 60px;
+      }
+      button {
+        font-size: 18px;
+        font-weight: bold;
+        padding: 10px 40px;
+      }
+    </style>
+    <script>
+      window.onload = () => {
+        const returnRandowNum = (num) => {
+          return Math.floor(Math.random() * num + 1);
+        };
+
+        const input = document.getElementsByTagName("input")[0];
+        const result = document.querySelector(".result");
+        const button = document.querySelector(".confirmBtn");
+        const resultArr = ["업", "다운", "정답"];
+        const randomNum = returnRandowNum(9);
+
+        button.addEventListener("click", () => {
+          console.log(randomNum);
+          fnResult();
+        });
+
+        const fnResult = () => {
+          const value = input.value;
+
+          if(value < randomNum) {
+            result.innerHTML = resultArr[0];
+          } else if(value > randomNum) {
+            result.innerHTML = resultArr[1];
+          } else {
+            result.innerHTML = resultArr[2];
+            alert("정답입니다.");
+
+            setTimeout(() => {
+              fnReset();
+            }, 3000);
+          }
+        };
+
+        const fnReset = () => {
+          input.value = 1;
+          result.innerHTML = "(힌트 : 1부터 10사이 정수)";
+          randomNum = returnRandowNum(9);
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <div class="contWrap">
+      <h3>숫자는 몇 일까요?</h3>
+      <p class="result">(힌트 : 1부터 10사이 정수)</p>
+      <input type="number" value="1" max="10" min="1" />
+      <button type="button" class="confirmBtn">확인</button>
+    </div>
+  </body>
+</html>

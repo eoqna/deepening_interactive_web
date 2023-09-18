@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>인터벌</title>
+    <style>
+    </style>
+    <script>
+      window.onload = () => {
+        const result = document.querySelector(".result");
+        const button = document.querySelector(".startBtn");
+        let timer;
+
+        const interval = () => {
+          clearInterval(timer);
+
+          let sec = 0;
+          timer = setInterval(() => {
+            sec++;
+            result.innerHTML = sec;
+          }, 1000);
+        };
+
+        button.addEventListener("click", () => {
+          interval();
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <div class="contWrap">
+      <button type="button" class="startBtn">더하기 시작</button>
+      <h1 class="result">0</h1>
+    </div>
+  </body>
+</html>

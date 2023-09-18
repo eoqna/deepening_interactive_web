@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트 돌림판</title>
+    <style>
+      body {
+        overflow: hidden;
+      }
+      h1 {
+        font-size: 20px;
+      }
+      button {
+        font-size: 20px;
+        padding: 10px 30px;
+        cursor: pointer;
+      }
+      .arrowWrap {
+        margin: 30px;
+      }
+      .arrowWrap img {
+        transition: transform 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+        width: 30%;
+      }
+    </style>
+    <script>
+      window.onload = () => {
+        const resetBtn = document.querySelector(".resetBtn");
+        const startBtn = document.querySelector(".startBtn");
+        const h1 = document.getElementsByTagName("h1")[0];
+        const arrow = document.querySelector(".arrow");
+
+        let rotateNum = 0;
+
+        resetBtn.addEventListener("click", () => {
+          rotateNum = 0;
+          h1.innerHTML = rotateNum + "deg";
+          arrow.style.transform = `rotate(${rotateNum}deg)`;
+        });
+
+        startBtn.addEventListener("click", () => {
+          rotateNum = Math.round(Math.random() * 720) + 1800;
+          
+          h1.innerHTML = rotateNum + "deg";
+          arrow.style.transform = `rotate(${rotateNum}deg)`;
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <button type="button" class="resetBtn">리셋</button>
+    <button type="button" class="startBtn">시작</button>
+    <h1>0deg</h1>
+    <div class="arrowWrap">
+      <img src="./image/up-arrow.svg" alt="arrow" class="arrow" />
+    </div>
+  </body>
+</html>
