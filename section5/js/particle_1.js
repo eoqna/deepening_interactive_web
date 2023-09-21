@@ -7,8 +7,6 @@ window.onload = () => {
   let windowHeight;
   let pageNum = 0;
   let item;
-
-  // <div class="textItem">  </div>
   const totalNum = 100;
 
   for(let i=0; i<totalNum; i++) {
