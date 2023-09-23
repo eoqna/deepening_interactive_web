@@ -26,7 +26,6 @@ const loop = () => {
   //반복 실행
 };
 
-
 const mobileChk = () => {
   var mobileKeyWords = new Array('Android', 'iPhone', 'iPad', 'BlackBerry', 'Windows CE', 'SAMSUNG', 'LG', 'MOT', 'SonyEricsson');
   for ( let info in mobileKeyWords ) {
