@@ -59,7 +59,7 @@ const fnPageChange = () => {
   contentWrap.style.background = "linear-gradient(120deg,"+ bgArray[pageNum][0] +", "+ bgArray[pageNum][1] + ")";
 
   for(let i=0; i<totalNum; i++) {
-    if(pageNum == i) {
+    if(pageNum === i) {
       //현재 컨텐츠(페이지)
       album[i].classList.add("active");
       pointBtnAll[i].classList.add("active");
