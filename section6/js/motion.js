@@ -28,7 +28,7 @@ const loop = () => {
 };
 
 const mobileChk = () => {
-  const mobileKeyWords = new Array('Android', 'iPhone', 'iPad', 'BlackBerry', 'Windows CE', 'SAMSUNG', 'LG', 'MOT', 'SonyEricsson');
+  const mobileKeyWords = new Array("Android", "iPhone", "iPad", "BlackBerry", "Windows CE", "SAMSUNG", "LG", "MOT", "SonyEricsson");
   for ( let info in mobileKeyWords ) {
     if ( navigator.userAgent.match(mobileKeyWords[info]) !== null ) {
       return true;
@@ -39,7 +39,7 @@ const mobileChk = () => {
 };
 
 const iosChk = () => {
-  const mobileKeyWords = new Array('iPhone', 'iPad');
+  const mobileKeyWords = new Array("iPhone", "iPad");
   for (let info in mobileKeyWords) {
       if (navigator.userAgent.match(mobileKeyWords[info]) !== null) {
           return true;
