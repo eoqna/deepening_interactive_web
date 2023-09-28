@@ -139,7 +139,7 @@ const pageChangeFunc = () => {
 
 
 const mobileChk = () => {
-  const mobileKeyWords = new Array('Android', 'iPhone', 'iPod', 'BlackBerry', 'Windows CE', 'SAMSUNG', 'LG', 'MOT', 'SonyEricsson');
+  const mobileKeyWords = new Array("Android", "iPhone", "iPod", "BlackBerry", "Windows CE", "SAMSUNG", "LG", "MOT", "SonyEricsson");
 
   for (let info in mobileKeyWords) {
     if (navigator.userAgent.match(mobileKeyWords[info]) != null) {
