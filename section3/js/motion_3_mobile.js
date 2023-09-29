@@ -87,8 +87,8 @@ window.onload = function(){
 
         //console.log("end_X : "+ end_X);
 
-        let chkNum = start_X - end_X;
-        let chkNumAbs = Math.abs(chkNum);
+        const chkNum = start_X - end_X;
+        const chkNumAbs = Math.abs(chkNum);
         //console.log(chkNum)
 
         if(chkNumAbs > 100){

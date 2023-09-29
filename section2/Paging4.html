@@ -72,7 +72,7 @@
   <script>
     window.onload = () => {
       const section = document.getElementsByTagName("section");
-      // var pointBtn = document.querySelector('.pointWrap').querySelectorAll("li");
+      // const pointBtn = document.querySelector('.pointWrap').querySelectorAll("li");
       const pointBtn = document.querySelectorAll('.pointWrap li');
 
       let pageNum = 0;
@@ -107,9 +107,9 @@
 
       //스크롤 이벤트
       window.addEventListener("scroll", function(event){
-        var scroll = this.scrollY;
+        const scroll = this.scrollY;
 
-        for(var i=0; i<totalNum; i++){
+        for(let i=0; i<totalNum; i++){
           if(scroll > section[i].offsetTop - window.outerHeight/1.5  && scroll < section[i].offsetTop - window.outerHeight/1.5 + section[i].offsetHeight){
             pageNum = i;
             break;
