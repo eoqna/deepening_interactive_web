@@ -10,7 +10,7 @@ bgArray[0] = ["#0272a4","#f6a564"];
 bgArray[1] = ["#b6bfc8","#36595b"];
 bgArray[2] = ["#e58e82","#6f569f"];
 
-window.onload = function(){
+window.onload = () => {
   prev_button = document.querySelectorAll("button")[0];
   next_button = document.querySelectorAll("button")[1];
   
@@ -40,17 +40,17 @@ window.onload = function(){
     pageChangeFunc();
   };
 
-  prev_button.addEventListener("click", function(){
+  prev_button.addEventListener("click", () => {
     movePage("prev");
   });
 
-  next_button.addEventListener("click", function(){
+  next_button.addEventListener("click", () => {
     movePage("next");
   });
 
   for( let i = 0; i < pointBtnAll.length; i++ ){
     ((idx) => {
-      pointBtnAll[idx].onclick = function() {
+      pointBtnAll[idx].onclick = () => {
         // alert(idx);
         pageNum = idx;
         pageChangeFunc();

@@ -21,7 +21,7 @@ window.onload = () => {
   totalNum = album.length;
   // alert(totalNum)
 
-  prev_button.addEventListener("click", function(){
+  prev_button.addEventListener("click", () => {
     if(pageNum > 0){
       pageNum --;
     }else{
@@ -30,7 +30,7 @@ window.onload = () => {
     fnPageChange();
   });
 
-  next_button.addEventListener("click", function(){
+  next_button.addEventListener("click", () => {
     if(pageNum < totalNum-1){
       pageNum ++;
     }else{

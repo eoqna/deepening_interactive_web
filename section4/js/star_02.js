@@ -32,7 +32,7 @@ window.onload = () => {
   };
 
   //스크롤 이동하는 3가지 방법
-  // setTimeout(function(){
+  // setTimeout(() => {
   //     window.scrollTo({
   //         top: document.querySelector('.bottom').offsetTop
   //         ,behavior: 'smooth'

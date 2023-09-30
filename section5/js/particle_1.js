@@ -39,7 +39,7 @@ window.onload = () => {
     
     if(pageNum === 0) {
       //가운데 정렬
-      _textItem.forEach(function(item, i){
+      _textItem.forEach((item, i) => {
         // TweenMax.killTweensOf(item);
         TweenMax.to(item, 1, {
           top : Math.random() * (windowHeight - 150) + 60,

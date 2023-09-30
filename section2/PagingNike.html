@@ -107,7 +107,7 @@
       }
 
       //스크롤 이벤트
-      window.addEventListener("scroll", function(event){
+      window.addEventListener("scroll", (e) => {
         const scroll = this.scrollY;
 
         for(const i=0; i<totalNum; i++) {

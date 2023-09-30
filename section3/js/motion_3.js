@@ -11,7 +11,7 @@ bgArray[0] = ["#0272a4","#f6a564"];
 bgArray[1] = ["#b6bfc8","#36595b"];
 bgArray[2] = ["#e58e82","#6f569f"];
 
-window.onload = function(){
+window.onload = () => {
   prev_button = document.querySelectorAll("button")[0];
   next_button = document.querySelectorAll("button")[1];
   
@@ -21,7 +21,7 @@ window.onload = function(){
   pointBtnAll = document.querySelectorAll(".pointWrap li");
   totalNum = album.length;
 
-  prev_button.addEventListener("click", function(){
+  prev_button.addEventListener("click", () => {
     if(pageNum > 0){
       pageNum --;
     }else{
@@ -30,7 +30,7 @@ window.onload = function(){
     fnPageChange();
   });
 
-  next_button.addEventListener("click", function(){
+  next_button.addEventListener("click", () => {
     if(pageNum < totalNum-1){
       pageNum ++;
     }else{
@@ -40,8 +40,8 @@ window.onload = function(){
   });
 
   for( let i = 0; i < pointBtnAll.length; i++ ) {
-    (function(idx) {
-      pointBtnAll[idx].onclick = function() {
+    ((idx) => {
+      pointBtnAll[idx].onclick = () => {
         // alert(idx);
         pageNum = idx;
         fnPageChange();

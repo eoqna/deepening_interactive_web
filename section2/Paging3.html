@@ -54,14 +54,14 @@
     }
   </style>
   <script>
-    window.onload = function(){
+    window.onload = () => {
       const section = document.getElementsByTagName("section");
       const image = document.querySelectorAll(".image");
       let pageNum = 0;
       const totalNum = image.length;
 
       //스크롤 이벤트
-      window.addEventListener("scroll", function(event){
+      window.addEventListener("scroll", (e) => {
         const scroll = this.scrollY;
 
         for(let i=0; i<totalNum; i++){
@@ -75,7 +75,7 @@
 
 
       //페이지 변경
-      function pageChangeFunc(){
+      const pageChangeFunc = () => { 
 
         for(let i=0; i<totalNum; i++){
           image[i].classList.remove("active");

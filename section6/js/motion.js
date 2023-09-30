@@ -56,16 +56,16 @@ window.onload = () => {
 
   const button = document.querySelectorAll("button")[0];
 
-  button.addEventListener("click", function () {
+  button.addEventListener("click", () => {
     button.classList.add("dimd");
     wrap.classList.add("active");
 
     if (isMobile) {
       const mobileOrientationChk = () => {
-        window.addEventListener("deviceorientation", function (event) {
+        window.addEventListener("deviceorientation", (e) => {
           //디바이스가 움직임 감지될때 실행
-          x = event.gamma;
-          y = event.beta;
+          x = e.gamma;
+          y = e.beta;
         });
 
         loopMobile();
