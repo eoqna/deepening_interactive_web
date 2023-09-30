@@ -30,7 +30,7 @@ window.onload = () => {
         left : windowWidth / 2 + (i * 40 - 200),
         rotation : 0,
         ease : Power3.easeInOut, 
-        delay : i * .2
+        delay : i * 0.2
       });
     });
   };
@@ -41,8 +41,8 @@ window.onload = () => {
         top : Math.random() * windowHeight,
         left : Math.random() * windowWidth, 
         rotation : Math.random()*180, 
-        ease : Power4.easeInOut, 
-        delay : i * .1
+        ease : Power04.easeInOut, 
+        delay : i * 0.1
       }); 
     });
   };
