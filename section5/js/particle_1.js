@@ -39,7 +39,7 @@ window.onload = () => {
     
     if(pageNum === 0) {
       //가운데 정렬
-      _textItem.forEach((item, i) => {
+      _textItem.forEach((item) => {
         // TweenMax.killTweensOf(item);
         TweenMax.to(item, 1, {
           top : Math.random() * (windowHeight - 150) + 60,
@@ -50,13 +50,13 @@ window.onload = () => {
           autoAlpha :  "random(.1,1)",
           scale : .5,
           ease : Power4.easenOut, 
-          delay : "random(0,.5)"
+          delay : "random(0, 0.5)"
         })
       })
 
     } else if(pageNum === 1) {
       //랜덤
-      _textItem.forEach((item, i) => {
+      _textItem.forEach((item) => {
         const scaleNum = Math.random() * 3;
         // console.log(scaleNum)
         TweenMax.to(item, 1, {
@@ -69,7 +69,7 @@ window.onload = () => {
           scale :  scaleNum, //"random(.1,2.5)",
           //webkitFilter:"blur(" + scaleNum / 3 + "px)",
           ease : Power4.easeInOut, 
-          delay : "random(0,.5)"
+          delay : "random(0, 0.5)"
         })
       });
 
@@ -82,10 +82,10 @@ window.onload = () => {
           rotationX : 0,
           rotationY : 0,
           rotationZ : 0,
-          autoAlpha :  1,
-          scale : .5,
+          autoAlpha : 1,
+          scale : 0.5,
           ease : Power4.easeInOut, 
-          delay : i* .02 //"random(0,.5)"
+          delay : i * 0.02 //"random(0,.5)"
         });
       });
     }
@@ -118,11 +118,11 @@ window.onload = () => {
   });
 
   _buttonAll.forEach((item, i) => {
-    TweenMax.from(item, .4, {
+    TweenMax.from(item, 0.4, {
       top : 100,
       autoAlpha : 0,
       ease : Power3.easeInOut, 
-      delay : i * .1 + 1,
+      delay : i * 0.1 + 1,
     });
   });
 

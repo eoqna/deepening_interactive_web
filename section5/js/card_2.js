@@ -31,13 +31,13 @@ window.onload = () => {
           rotationY : 0, 
           rotationZ : 0,
           ease : Power4.easeInOut, 
-          delay : i * .15
+          delay : i * 0.15
         });
       });
 
     } else if(pageNum === 1) {
       //랜덤
-      _cards.forEach((item, i) => {
+      _cards.forEach((item) => {
         TweenMax.to(item, 1, {
           top : Math.random() * (windowHeight - 300) + 100,
           left : Math.random() * (windowWidth - 300) + 100, 
@@ -46,7 +46,7 @@ window.onload = () => {
           rotationZ : "random(-90,90)",
           //scale : Math.random() * .6 + .6,
           ease : Power4.easeInOut, 
-          delay : "random(0,.5)"
+          delay : "random(0, 0.5)"
         });
       });
 
