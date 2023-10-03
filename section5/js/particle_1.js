@@ -12,8 +12,8 @@ window.onload = () => {
   for(let i=0; i<totalNum; i++) {
     item = document.createElement("div");
     item.setAttribute("class", "textItem");
-    item.style.top = window.innerHeight / 2 + "px";
-    item.style.left = window.innerWidth / 2 + "px";
+    item.style.top = `${window.innerHeight / 2}px`;
+    item.style.left = `${window.innerWidth / 2}px`;
     item.innerHTML = i;
     section.appendChild(item);
   }
@@ -47,7 +47,7 @@ window.onload = () => {
           rotationX :  0, 
           rotationY : 0, 
           rotationZ : 0,
-          autoAlpha :  "random(.1,1)",
+          autoAlpha :  "random(0.1, 1)",
           scale : .5,
           ease : Power4.easenOut, 
           delay : "random(0, 0.5)"
@@ -62,9 +62,9 @@ window.onload = () => {
         TweenMax.to(item, 1, {
           top : Math.random() * (windowHeight - 250) + 100,
           left : Math.random() * (windowWidth - 200) + 80, 
-          rotationX :  "random(-60,60)", 
-          rotationY : "random(-60,60)", 
-          rotationZ : "random(-90,90)",
+          rotationX :  "random(-60, 60)", 
+          rotationY : "random(-60, 60)", 
+          rotationZ : "random(-90, 90)",
           autoAlpha :  scaleNum / 3,
           scale :  scaleNum, //"random(.1,2.5)",
           //webkitFilter:"blur(" + scaleNum / 3 + "px)",

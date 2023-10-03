@@ -121,7 +121,7 @@ window.onload = () => {
 //여기서 모든 것을 한다.
 const pageChangeFunc = () => {
   // console.log(pageNum)
-  contentWrap.style.background = "linear-gradient(120deg,"+ bgArray[pageNum][0] +", "+ bgArray[pageNum][1] + ")";
+  contentWrap.style.background = `linear-gradient(120deg, ${bgArray[pageNum][0]}, ${bgArray[pageNum][1]})`;
 
   for(let i=0; i<totalNum; i++) {
     if(pageNum === i){
